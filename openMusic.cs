@@ -1,19 +1,17 @@
 ﻿using PluginCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.Composition;
 
 namespace openMusic
 {
+    [Export(typeof(IPlugin))]
     public class openMusic : IPlugin
     {
         public string navItem
         {
             get
             {
-                return "music";
+                return "musicWindow";
             }
         }
 
@@ -61,7 +59,8 @@ namespace openMusic
 
         public void Tick()
         {
-            throw new NotImplementedException();
+
         }
+
     }
 }
